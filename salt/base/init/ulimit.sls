@@ -1,4 +1,4 @@
 /etc/security/limits.conf:
   file.append:
     - text:
-      - *softnofile102400
+      - softnofile102400
