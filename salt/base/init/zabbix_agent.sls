@@ -7,6 +7,8 @@ zabbix-agent:
     - template: jinja
     - defaults:
       Server: {{ pillar['zabbix-agent']['Zabbix-Server'] }}
+      ServerActive: {{ pillar['zabbix-agent']['Zabbix-Server'] }}
+      Hostname: {{  pillar['zabbix-agent']['HostName'] }}
     - require:
       - pkg: zabbix-agent
   service.running:
@@ -14,4 +16,3 @@ zabbix-agent:
     - watch:
       - pkg: zabbix-agent
       - file: zabbix-agent
-
