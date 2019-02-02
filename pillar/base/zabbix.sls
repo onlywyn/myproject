@@ -1,2 +1,2 @@
 zabbix-agent:
-  zabbix-server: 1.1.1.11
+  Zabbix-Server: 1.1.1.11

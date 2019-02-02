@@ -3,7 +3,7 @@ zabbix-agent:
     - name: zabbix-agent
   file.managed:
     - name: /etc/zabbix/zabbix_agentd.conf
-    - source: salt://zabbix/files/zabbix_agentd.conf
+    - source: salt://init/files/zabbix_agentd.conf
     - template: jinja
     - defaults:
       Server: {{ pillar['zabbix-agent']['Zabbix-Server'] }}
